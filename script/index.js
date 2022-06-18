@@ -19,6 +19,10 @@ let userList = document.querySelector('.todo');
 
     addSaved.addEventListener('click', () => {
 
+        if(!addMassage.value){
+            return;
+        }
+
     /*строкой ниже создадим объект, который потом занесем в массив. Этот объект будет содержать результаты input*/
 
     let newList = { 
@@ -58,7 +62,7 @@ function displayMassage() {
         disMassage += `
         <li>
         <input type="checkbox" id="item__${i}" ${item.checked ? 'checked' : ''}>
-        <label for="item__${i}">${item.answer}</label>
+        <label for="item__${i}" class="${item.important ? 'important' : ''}">${item.answer}</label>
         </li>
         `;
         
@@ -103,3 +107,31 @@ userList.addEventListener('change', function(event){
 })
 
 /*Ниже мы напишем код, позволяющий при нажатии на левую кнопку мыши, вызывать специальное меню, а не по умолчанию;*/
+
+
+
+
+/*Блок кода, который не работает... надо разобраться(не выделяет красным важные дела и не удаляет при нажатии ctrl + Прав.кн.мыши)*/
+
+/*Ниже будет напсан код, который при нажатии правой кнопкой мыши выделяет текст, помечая его как важный и, заетем, удаляет его, при необходимости;*/
+
+userList.addEventListener('contextmenu', function(event){
+
+    event.preventDefault(); //отмена стандартного поведения браузера (то есть, при нажатии правой кнопокой мыши ничего не происходит);
+
+    freeMassiv.forEach(function(item, i){
+        if(item.freeMassiv === event.target.innerHTML){
+            if(event.ctrlKey){
+                freeMassiv.splice(i, 1);
+            }else{
+                item.important = !item.important;
+            }
+            item.important = !item.important;
+            displayMassage();
+            localStorage.setItem('DoList', JSON.stringify(freeMassiv));
+        }
+    })
+})
+
+
+/*Еще нужно весь этот проектик подогнать под сужение экрана. Под мобилу, короче;*/

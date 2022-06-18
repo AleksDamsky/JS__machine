@@ -48,3 +48,42 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+/*--------------------------------------------------*/
+
+/*Main box*/
+
+.Main{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+
+.List{
+	border: 2px solid black;
+	border-radius: 30px;
+	background-color: rgba(127, 255, 212, 0.158);
+	margin: 20px 400px 0 400px;
+}
+
+.introduction{
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.Header{
+	position: relative;
+	font-size: 15px;
+	display: grid;
+	justify-content: center;
+	padding-top: 20px;
+	padding-bottom: 20px
+}
+
+.important{
+	font-size: x-large;
+	color: brown;
+}
