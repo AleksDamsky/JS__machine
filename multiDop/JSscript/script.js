@@ -40,3 +40,8 @@ function displayList(){
     })
 
 }
+
+
+addList.addEventListener('changes',(event) =>{
+    let addEvent = event.target.getAttribute('.id');
+})
