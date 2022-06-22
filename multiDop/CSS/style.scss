@@ -53,4 +53,11 @@ table {
 
 .Main{
 	box-sizing: border-box;
+	max-width: 1440px;
+	position: relative;
+}
+
+.container{
+	position: absolute;
+	margin: 20px 500px;
 }

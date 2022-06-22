@@ -1,47 +1,25 @@
 let addButton = document.querySelector('.Button');
 let addInput = document.querySelector('.Input');
-let addList = document.querySelector('.cases')
+let Cases = document.querySelector('.cases');
 
-let newArr = [];
+/*Создам массив для внесения в него объектов со значениями*/
 
-if(localStorage.getItem('todo')){
-    newArr = JSON.parse(localStorage.getItem('todo'))
-    displayList();
-};
+let newMassiv = [];
 
-addButton.addEventListener('click', () =>{
+/*Создам функцию - конструктор, которая сможет создавать множество однотипных объектов*/
 
-    let newObj = {
-        massage : addInput.value,
-        checked : false,
-    }
+function DisplayResults(input){
 
-    newArr.push(newObj);
-
-    displayList();
-
-    localStorage.setItem('todo', JSON.stringify(newArr));
-})
-
-
-function displayList(){
-
-    let displayCases = '';
-
-    newArr.forEach(function(item, i){
-        displayCases += `
-        <li>
-        <input type="checkbox" id="item_${i}" ${item.checked ? 'checked' : ''}>
-        <label for="item_${i}">${item.massage}</label>
-        </li>
-        `;
-
-        addList.innerHTML = displayCases;
-    })
+    this.input = input;
+    this.checked = false;
 
 }
 
+let update = () => {
+    localStorage.setItem('todoList', JSON.stringify(newMassiv))
+}
 
-addList.addEventListener('changes',(event) =>{
-    let addEvent = event.target.getAttribute('.id');
+addButton.addEventListener('click', () => {
+    newMassiv.push(new DisplayResults(addInput.value));
+    update();
 })

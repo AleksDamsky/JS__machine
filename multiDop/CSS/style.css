@@ -58,5 +58,12 @@ table {
 .Main {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  max-width: 1440px;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  margin: 20px 500px;
 }
 /*# sourceMappingURL=style.css.map */

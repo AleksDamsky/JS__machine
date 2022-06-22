@@ -8,7 +8,7 @@ let userList = document.querySelector('.todo');
 
     /*следующие строки будут содержать скрипт, который будет выводить сохраненные(с помощью localStorage) в массиве результаты автоматически*/
 
-    if(localStorage.getItem('DoList')){ /*если localStorage получал каки-то данные в 'DoList', то{*/
+    if(localStorage.getItem('DoList')){ /*если localStorage получал какие-то данные в 'DoList', то{*
 
     /*нужно разобрать массив, откуда эта информация поступала с помощью <JSON.parse(localStorage.getItem('DoList'))>*/
         freeMassiv = JSON.parse(localStorage.getItem('DoList'));
