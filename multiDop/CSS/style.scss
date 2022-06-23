@@ -51,6 +51,11 @@ table {
 
 /*Main Block*/
 
+body{
+	background-color: rgb(75, 161, 241);
+}
+
+
 .Main{
 	box-sizing: border-box;
 	max-width: 1440px;
@@ -60,4 +65,19 @@ table {
 .container{
 	position: absolute;
 	margin: 20px 500px;
+}
+
+.Header {
+	border: 2px solid yellow;
+	padding: 30px 100px;
+	background-color: rgb(202, 195, 128);
+
+}
+
+.cases-item{
+	margin-top: 20px;
+	padding: 20px 30px;
+	border: 2px solid green;
+	text-align: center;
+	background-color: rgb(202, 195, 128);
 }
