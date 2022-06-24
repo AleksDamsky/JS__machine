@@ -79,6 +79,11 @@ body{
 	transition: all 0.25s;
 }
 
+.Button:active{
+	background-color: rgb(221, 37, 37);
+	transition: all 0.7s;
+}
+
 .Input:focus{
 	outline: none;
 	border: 2px solid rgb(85, 14, 85);
