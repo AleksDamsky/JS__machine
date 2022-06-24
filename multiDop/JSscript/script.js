@@ -1,11 +1,11 @@
-let addButton = document.querySelector('.Button');
-let addInput = document.querySelector('.Input');
-let Cases = document.querySelector('.cases');
+const addButton = document.querySelector('.Button');
+const addInput = document.querySelector('.Input');
+const Cases = document.querySelector('.cases');
 
 /*Создам массив для внесения в него объектов со значениями*/
 
 let newMassiv;
-!localStorage.toDoList ? newMassiv = [] : newMassiv = JSON.parse(localStorage.getItem(toDoList));
+!localStorage.todoList ? newMassiv = [] : newMassiv = JSON.parse(localStorage.getItem(todoList));
 
 /*Создам функцию - конструктор, которая сможет создавать множество однотипных объектов*/
 
@@ -19,12 +19,12 @@ function DisplayResults(input){
 /* *С этой строки* */
 /*Со строки <*С этой строки*> до <*До этой строки*> мы создаем шаблоны вывода в список на экран, которые будут содержать дела, введенные пользователем.*/
 
-let createTemplate = (toDoList, i) => {
+let createTemplate = (todoList, i) => {
     return `
         <div class="cases-item">
 
             <div class="description">
-                ${toDoList.input}
+                ${todoList.input}
             </div>
 
             <div class="buttons">

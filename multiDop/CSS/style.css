@@ -69,12 +69,26 @@ body {
 .container {
   position: absolute;
   margin: 20px 500px;
-}
-
-.Header {
   border: 2px solid yellow;
   padding: 30px 100px;
   background-color: #cac380;
+}
+
+.Button {
+  color: #168181;
+}
+
+.Button:hover {
+  color: #912b6a;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.Input:focus {
+  outline: none;
+  border: 2px solid #550e55;
+  -webkit-box-shadow: 1px 1px 10px rebeccapurple;
+          box-shadow: 1px 1px 10px rebeccapurple;
 }
 
 .cases-item {
