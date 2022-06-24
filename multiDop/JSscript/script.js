@@ -5,7 +5,7 @@ const Cases = document.querySelector('.cases');
 /*Создам массив для внесения в него объектов со значениями*/
 
 let newMassiv;
-!localStorage.todoList ? newMassiv = [] : newMassiv = JSON.parse(localStorage.getItem(todoList));
+!localStorage.newMassiv ? newMassiv = [] : newMassiv = JSON.parse(localStorage.getItem(todoList));
 
 /*Создам функцию - конструктор, которая сможет создавать множество однотипных объектов*/
 
@@ -19,7 +19,7 @@ function DisplayResults(input){
 /* *С этой строки* */
 /*Со строки <*С этой строки*> до <*До этой строки*> мы создаем шаблоны вывода в список на экран, которые будут содержать дела, введенные пользователем.*/
 
-let createTemplate = (todoList, i) => {
+let createTemplate = (todoList,index) => {
     return `
         <div class="cases-item">
 
@@ -30,6 +30,7 @@ let createTemplate = (todoList, i) => {
             <div class="buttons">
 
                 <input class="btn-complete" type="checkbox">
+                <label for="btn-complete"></label>
 
                 <button class="btn-delete">
 
@@ -42,10 +43,10 @@ let createTemplate = (todoList, i) => {
 }
 
 let fillHtmlList = () => {
-    Cases.innerHTML = "";//зачистка всего, что не нужно нам, но находится в списке;
+    // Cases.innerHTML = "";//зачистка всего, что не нужно нам, но находится в списке;
     if(newMassiv.lenght > 0){
-        newMassiv.forEach((item, i) => {
-            Cases.innerHTML += createTemplate(item, i)
+        newMassiv.forEach((item, index) => {
+            Cases.innerHTML += createTemplate(item, index)
         })
     }
 
@@ -61,6 +62,6 @@ let update = () => {
 
 addButton.addEventListener('click', () => {
     newMassiv.push(new DisplayResults(addInput.value));
-    update();
     fillHtmlList();
+    update();
 });

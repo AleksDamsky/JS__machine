@@ -74,6 +74,10 @@ body {
   background-color: #cac380;
 }
 
+.intr::first-letter {
+  font-size: xx-large;
+}
+
 .Button {
   color: #168181;
 }
