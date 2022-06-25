@@ -30,7 +30,7 @@ function displayMessage(){
 
     let htmlElement = '';
 
-    mainMassiv.forEach( function(item, i){
+    mainMassiv.forEach( function(item, i, mainMassiv){
 
         htmlElement += `
         <li>
