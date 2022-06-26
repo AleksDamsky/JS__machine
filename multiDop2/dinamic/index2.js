@@ -6,6 +6,7 @@ let arr = [];
 
 if(localStorage.getItem('todoList')){
     arr = JSON.parse(localStorage.getItem('todoList'));
+
     displayMessage();
 }
 
@@ -16,7 +17,7 @@ addBtn.addEventListener('click', () => {
         checked : false,
     };
 
-    arr.push.apply(object);
+    arr.push(object);
 
     displayMessage();
 
@@ -28,7 +29,7 @@ function displayMessage(){
 
     let ulList = '';
 
-    arr.prototype.forEach.cala(function(item, i){
+    arr.forEach(function(item, i){
         ulList += `
         <li>
 
@@ -43,7 +44,12 @@ function displayMessage(){
 }
 
 
-
+addCases.addEventListener('change',(event) => {
+    let idInput = event.target.getAttribute('id');
+    let forLabel = addCases.querySelector('[forLabel' + idInput + ']');
+    let valueLabel = forLabel.innerHTML;
+    console.log(valueLabel);
+})
 
 
 
@@ -53,4 +59,11 @@ function displayMessage(){
 index2.js:33 Uncaught TypeError: Arr.forEach is not a function
     at displayMessage (index2.js:33:9)
     at index2.js:9:5
+*/
+
+/*second error
+
+index2.js:50 Uncaught TypeError: Cannot read properties of null (reading 'innerHTML')
+    at HTMLUListElement.<anonymous> (index2.js:50:31)
+
 */
