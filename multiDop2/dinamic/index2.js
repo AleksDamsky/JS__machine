@@ -33,7 +33,7 @@ function displayMessage(){
         ulList += `
         <li>
 
-        <input type="checkbox" id="item__${i}">
+        <input type="checkbox" id="item__${i} ${item.checked ? 'checked' : ''}">
         <label for="item__${i}"> ${item.input} </label>
         
         </li>
@@ -48,7 +48,11 @@ addCases.addEventListener('change',(event) => {
     let idInput = event.target.getAttribute('id');
     let forLabel = addCases.querySelector('[forLabel' + idInput + ']');
     let valueLabel = forLabel.innerHTML;
-    console.log(valueLabel);
+
+    if(!item.massage === valueLabel){
+        item.checked = !item.checked;
+        localStorage.setItem('todoList', JSON.stringify(arr));
+    }
 })
 
 
