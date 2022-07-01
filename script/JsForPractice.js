@@ -73,13 +73,13 @@
 
 // console.log(func(1, 1));
 
-let a = {
-    name : 'aleks',
-    age : 21,
+// let a = {
+//     name : 'aleks',
+//     age : 21,
 
-    f : () => {
-        return this.age;
-    },
-};
+//     f : () => {
+//         return this.age;
+//     },
+// };
 
-console.log(a.f());
+// console.log(a.f());
