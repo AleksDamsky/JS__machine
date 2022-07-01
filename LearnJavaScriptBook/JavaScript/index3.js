@@ -1,8 +1,8 @@
 //declear variables for append info about ship
 
-let location1;
-let location2;
-let location3;
+let location1 = 3;
+let location2 = 4;
+let location3 = 5;
 
 //append variables for attempt
 
@@ -20,3 +20,12 @@ let qusses = 0;
 
 let isSunk = false;
 
+while(isSunk == false){
+    quess = prompt('Введите число от 0 до 6');
+
+    if (quess < 0 || quess > 0){
+        alert('Ты вводишь не верные числа');
+    }else{
+        qusses+=1;
+    }
+}
