@@ -291,3 +291,75 @@
 /* Функции */
 
 // Function expression, Function Declaration, callback, Стрелочная функция, рекурсия;
+// Названия фунцкций начинается с действия add.. show.. set.. get..
+
+//1. Function Declaration
+
+// function имя (параметр){...тело функции...}
+
+// function getNumber(a, b) {
+
+//     let sumNumber = a + b;
+
+//     console.log(sumNumber);
+
+// };
+
+// getNumber(5, 7);
+
+//----------------------------
+
+// Функция с директивой return;
+
+//<return> в функции это как консоль лог;
+
+// function calcNumber(a, b){
+//     let c = a + b;
+//     return c;
+// }
+
+// console.log(calcNumber(3, 5))
+
+//------------------------
+//Function Expression;
+
+// let func = (a, b) => {
+//     let c = a * b;
+//     return c;
+// };
+
+// console.log(func(2, 4));
+
+//---------------------------
+
+/* Рекурсия */
+
+// Рекурсия - это функция, вызывающая саму себя;
+
+// В бесконечном цикле делается запрос на ввод двух чисел (два отдельных вызова функции prompt()). Числа сравниваются между собой, и выводится одна из трёх фраз: «числа равны», «первое число меньше», «второе число меньше». Если пользователь ввёл не число, выводится фраза «первый ввод – не число» (или «второй ввод – не число»), и выполнение скрипта прекращается.
+
+while (massage1, massage2) {
+
+    let massage1 = prompt('Введите первое число');
+    
+    let massage2 = prompt('Введите второе число');
+
+    if (massage1 == Number && massage2 == Number){
+
+        if ( massage1 == massage2){
+            alert('Числа равны');
+        } else if ( massage1 < massage2){
+            alert('Первое число меньше второго');
+        } else if ( massage1 > massage2){
+            alert('Первое число больше второго');
+        }
+
+    }else if ( massage1 == String || massage1 == null){
+        alert('Первый ввод - не число') 
+
+    }else if ( massage2 == String || massage2 == null){
+        alert('Второй ввод - не число')
+    }
+
+
+}
