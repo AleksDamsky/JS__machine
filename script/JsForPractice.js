@@ -338,28 +338,38 @@
 
 // В бесконечном цикле делается запрос на ввод двух чисел (два отдельных вызова функции prompt()). Числа сравниваются между собой, и выводится одна из трёх фраз: «числа равны», «первое число меньше», «второе число меньше». Если пользователь ввёл не число, выводится фраза «первый ввод – не число» (или «второй ввод – не число»), и выполнение скрипта прекращается.
 
-while (massage1, massage2) {
+while (true) {
 
-    let massage1 = prompt('Введите первое число');
+    let massage1 = +prompt('Введите первое число');
     
-    let massage2 = prompt('Введите второе число');
+    let massage2 = +prompt('Введите второе число');
 
-    if (massage1 == Number && massage2 == Number){
+    if ( parseInt(massage1) && parseInt(massage2)){
 
         if ( massage1 == massage2){
             alert('Числа равны');
+            break;
         } else if ( massage1 < massage2){
             alert('Первое число меньше второго');
+            break;
         } else if ( massage1 > massage2){
             alert('Первое число больше второго');
+            break;
         }
 
-    }else if ( massage1 == String || massage1 == null){
-        alert('Первый ввод - не число') 
+    } else {
 
-    }else if ( massage2 == String || massage2 == null){
-        alert('Второй ввод - не число')
-    }
+      alert('это не число');
+      break;
+
+};
 
 
 }
+// let massage = prompt(`Введите число`);
+
+// if ( parseInt(massage)){
+//     alert('Это число ')
+// } else{
+//     alert('Это другой тип данных')
+// }
