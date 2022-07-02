@@ -21,9 +21,13 @@ let quesses = 0;
 let isSunk = false;
 
 while(isSunk == false){
-    quess = prompt('Введите число от 0 до 6');
+    quess =  prompt('Введите число от 0 до 6');
 
-    if (quess < 0 || quess > 6){
+    if (quess == null){
+        alert(`lol`);
+    }
+
+    if (quess <= 0 || quess >= 6){
         alert('Ты вводишь не верные числа');
     }else{
         quesses += 1;
@@ -45,7 +49,7 @@ while(isSunk == false){
     }
 
     alert(`Корабль потоплен за: 
-    ${quesses} ходов`);
+    ${quesses} ходов`);ы
 
     if (isSunk == true){
         break;

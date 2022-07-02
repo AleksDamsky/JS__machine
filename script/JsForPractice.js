@@ -83,3 +83,105 @@
 // };
 
 // console.log(a.f());
+
+
+//---------------------------------------------------------------------
+/*типы данных*/
+
+//number, string, boolean, NaN, undefined, null, object, symbol
+
+//typeof - смотреть тип данных переменной;
+
+// let userName = 21;
+// console.log(typeof (userName)); //number
+
+// userName = 'Aleks';
+// console.log(typeof (userName));// string
+
+// userName = true;
+// console.log(typeof (userName));//boolean
+
+// userName = 11;
+// console.log(typeof (userNAme)); // undefined
+
+// userName = null;
+// console.log(userName); // null
+// userName = null;
+// console.log(typeof userName); // object - общепризнанная ошибка;
+
+// userName = NaN;
+// console.log(userName); //NaN - ошибка математической операции;
+
+// userName = {
+//     car: 'benz',
+// }
+// console.log(typeof userName); // object 
+
+// userName = Symbol('lol');
+// console.log(typeof userName); //Symbol - установление универсального идентификатора;
+
+// userName = function () {
+//     // ...
+// };
+
+// console.log(typeof userName); //function
+
+//9 типов данных - number, string, boolean, NaN, null, undefined, object, symbol, function;
+
+
+//--------------------------------------------------------------------------
+/*Операторы*/
+
+// Операторы - операнды - аргументы. Они применяются к операторам.
+// Существуют Унарные(+a) и Бинарные(a + b) операторы.
+
+// Математические операторы --   + - / * % **
+// Логические операторы --   ! || && ?? 
+
+
+//--------------------------------------------------------------------------
+/*Условия*/
+
+// if(...условие...){
+
+// }
+//--------------
+// if () {
+
+// } else {
+
+// }
+
+//--------------
+
+// if(){
+
+// } else if {
+
+// } else {
+
+// }
+
+//---------------
+
+// let a = 5;
+
+// let b = (3 + 4) ? 7 : 'lol'; - - если (3 + 4) = 7, то вывести 7, иначе 'lol';
+
+// console.log(b);
+
+//--------------
+
+let a = 5; 
+let b = 3;
+let z = [];
+
+switch (z) {
+    case a > b : z.push(a);
+    break;
+
+    case a < b : console.log('lol');
+    break; 
+}
+
+console.log(z);
