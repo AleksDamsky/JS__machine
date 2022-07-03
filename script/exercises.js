@@ -43,21 +43,21 @@
 
 //Напишите однострочное решение, которое вычисляет сумму квадратных корней для всех чётных чисел целочисленного массива.
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8,  9, 10];
+// Math.sqrt() - - возвращает квадратный корень числа;
 
-let newArr = [];
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// arr.reduce((acc, item) => { 
+//     for (let i = 0; i < arr.length; i++){
+//         if ((arr[i] % 2) === 0 ){
+//             console.log(arr[i]);
+//         }
+//     }
+// }, [])
 
 
-for(let i = 0; i < arr.length; i++){
+arr.filter(element => !(element % 2));
 
-    if((arr[i] % 2) === 0){
+arr.reduceRight((acc, element) => acc + Math.sqrt(element), 0);
 
-        let evenNumber = arr.push(arr[i]);
-
-        // newArr.push(evenNumber);
-
-    };
-
-};
-
-console.log(newArr);
+console.log(arr);
