@@ -516,21 +516,97 @@
 /* Метод <unshift> */
 // Метод, который добавляет элемент в массив с начала и сдвигает другие элементы на позиуию назад;
 
+// let arr = [
+//     'lol',
+//     'kek',
+//     'buba',
+// ];
+
+// arr.shift();
+
+// function arrFunc() {
+//     arr.push('buba crasava');
+//     alert('buba top')
+// };
+
+// arr.unshift('lolik');
+// arr.push(arrFunc);
+
+// console.log(arr);
+// console.log(arr[3]());
+
+//-----------------------
+
+/* Метод <forEach> */
+
+//Метод, который применяет функцию к каждому элементу массива; Перебор элементов массива;
+//Необходимо помнить, что даный метод не возвращает ничего, то есть просто перебирает массив и закидвает его обратно в главный массив;
+
+// let arr = [
+//     'lol',
+//     'kek',
+//     'buba',
+// ];
+
+// const showArr = arr.forEach((item) => {
+//     console.log(item);
+// });
+
+// console.log(showArr);
+
+//---------------------------
+
+/* Метод <map> */
+//Такой метод, который перебирает массив, применят к нему функцию и возвращает результат в новом массиве;
+
+// let arr = [
+//     'lol',
+//     'kek',
+//     'buba',
+// ];
+
+// const newArr = arr.map((item, index) => {
+//     return item + item + index;
+// });
+
+// console.log(newArr);
+// console.log(arr);
+
+//-------------------------------
+
+/* метод <reduce> */
+//Такой метод, который перебирает элементы массива и возвращает новую структуру данных;
+
+// acc - это аккумулятор. Это и есть новая структура данных, которую мы будем возвращать;
+
+// let arr = [
+//     'lol',
+//     'kek',
+//     'buba',
+// ];
+
+// let newArr = arr.reduce((acc, item, index) => {
+
+//     acc[index] = item;
+//     return acc; // По умолчанию, при вызове <acc>(аккумулятора), берется первый элемент массива
+
+// }, {}) // Тут мы обозначаем структуру данных, которую мы хотим создать с помощью аккумулятора;
+
+// console.log(newArr);
+
+//------------------------------
+
+/* Метод <find> */
+//Такой метод, который ищет элементы массива и возвращает их нам, если они там есть;
+
 let arr = [
     'lol',
     'kek',
     'buba',
 ];
 
-arr.shift();
+let newArr = arr.find((item, index) => {
+    return item == 'lol';
+});
 
-function arrFunc() {
-    arr.push('buba crasava');
-    alert('buba top')
-};
-
-arr.unshift('lolik');
-arr.push(arrFunc);
-
-console.log(arr);
-console.log(arr[3]());
+console.log(newArr);
