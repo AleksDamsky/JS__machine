@@ -338,34 +338,34 @@
 
 // В бесконечном цикле делается запрос на ввод двух чисел (два отдельных вызова функции prompt()). Числа сравниваются между собой, и выводится одна из трёх фраз: «числа равны», «первое число меньше», «второе число меньше». Если пользователь ввёл не число, выводится фраза «первый ввод – не число» (или «второй ввод – не число»), и выполнение скрипта прекращается.
 
-while (true) {
+// while (true) {
 
-    let massage1 = +prompt('Введите первое число');
+//     let massage1 = +prompt('Введите первое число');
     
-    let massage2 = +prompt('Введите второе число');
+//     let massage2 = +prompt('Введите второе число');
 
-    if ( parseInt(massage1) && parseInt(massage2)){
+//     if ( parseInt(massage1) && parseInt(massage2)){
 
-        if ( massage1 == massage2){
-            alert('Числа равны');
-            break;
-        } else if ( massage1 < massage2){
-            alert('Первое число меньше второго');
-            break;
-        } else if ( massage1 > massage2){
-            alert('Первое число больше второго');
-            break;
-        }
+//         if ( massage1 == massage2){
+//             alert('Числа равны');
+//             break;
+//         } else if ( massage1 < massage2){
+//             alert('Первое число меньше второго');
+//             break;
+//         } else if ( massage1 > massage2){
+//             alert('Первое число больше второго');
+//             break;
+//         }
 
-    } else {
+//     } else {
 
-      alert('это не число');
-      break;
+//       alert('это не число');
+//       break;
 
-};
+// };
 
 
-}
+// }
 // let massage = prompt(`Введите число`);
 
 // if ( parseInt(massage)){
@@ -373,3 +373,164 @@ while (true) {
 // } else{
 //     alert('Это другой тип данных')
 // }
+
+/* Массивы */
+
+// Массив - это своего рода объект;
+
+// Обыкновенный массив
+
+// let arr = [
+//     'clone',
+//     'clone - sniper',
+//     'clone - pilot',
+// ];
+
+// console.log(arr);
+// console.log(arr[0]);
+// console.log(arr[2]);
+
+//----------------------
+
+//Способы получения элементов массива, либо элементов элементов массива;
+// let arr = [
+//     'clone',
+//     'clone - sniper',
+//     'clone - pilot',
+
+//     function funcArr(){
+//         console.log('hi!');
+//     },
+
+//     obj = {
+//         key : 'Aleks',
+//         secondName : 'Hripunov',
+//     }
+// ];
+
+// console.log(arr[4].secondName);
+// console.log(arr[3]());
+
+//------------------------
+
+// Длина массива;
+
+// let arr = [
+//         'clone',
+//         'clone - sniper',
+//         'clone - pilot',
+//     ];
+
+//     console.log(arr.length);
+
+//-------------------------
+
+// Так как массив это тот же объект в JS, то ведет он себя так же как и объект == массив можно копировать в другую перменную, но копия будет ссылкой на первоначальный массив;
+
+// let arr = [
+//     'lol',
+//     'kek',
+//     'buba',
+// ];
+
+// let arr2 = arr;
+
+// arr2.lenght = 1;
+
+// console.log(arr);
+
+//--------------------------
+
+/*Способ работы с элементами массива = их изменение;*/
+
+// let arr = [
+//     'lol',
+//     'kek',
+//     'buba',
+// ];
+
+// arr[0] = 'lolik';
+
+// arr[3] = 'pops';
+
+// console.log(arr);
+
+//--------------------------
+
+/* Метод <push> */
+//Данный метод добавляет новый элемент в конец массива;
+
+// let arr = [
+//     'lol',
+//     'kek',
+//     'buba',
+// ];
+
+// let object = {
+//     name: 'Aleks',
+//     car: 'Aston Martin Victor',
+// };
+
+// arr.push(object);
+
+// console.log(arr);
+//---------------------------------
+
+/* Метод <pop> */
+//Метод, который удаляет элемент массива с конца;
+
+// let arr = [
+//     'lol',
+//     'kek',
+//     'buba',
+// ];
+
+// arr.pop();
+// console.log(arr);
+
+
+//---------------------------------
+
+/* Метод <shift> */
+
+// Такой метод, который удаляет первый элемент массива и перемещает другие элементы на позицию вперед;
+
+// let arr = [
+//     'lol',
+//     'kek',
+//     'buba',
+// ];
+
+// function arrFunc () {
+//     console.log('Hi, lolik!');
+// };
+
+// arr.shift();
+
+// arr.push(arrFunc);
+
+// console.log(arr[2]());
+
+//----------------------------------
+
+/* Метод <unshift> */
+// Метод, который добавляет элемент в массив с начала и сдвигает другие элементы на позиуию назад;
+
+let arr = [
+    'lol',
+    'kek',
+    'buba',
+];
+
+arr.shift();
+
+function arrFunc() {
+    arr.push('buba crasava');
+    alert('buba top')
+};
+
+arr.unshift('lolik');
+arr.push(arrFunc);
+
+console.log(arr);
+console.log(arr[3]());
