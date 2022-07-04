@@ -45,7 +45,8 @@
 
 // Math.sqrt() - - возвращает квадратный корень числа;
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 
 // arr.reduce((acc, item) => { 
 //     for (let i = 0; i < arr.length; i++){
@@ -56,8 +57,45 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // }, [])
 
 
-arr.filter(element => !(element % 2));
+// arr.filter(element => !(element % 2)); // Применяем метод .filter() указывая на то, что неоюходимо убрать элементы, которые имеют остаток при делении на 2;
 
-arr.reduceRight((acc, element) => acc + Math.sqrt(element), 0);
+// arr.reduceRight((acc, element) => acc + Math.sqrt(element), 0); // С помощью метода .reduce() аккумулируем числа от 1 до n
 
-console.log(arr);
+// console.log(arr);
+
+
+// Exercise number 3.
+
+//Выйдите из цикла, изменив только две отмеченные строки. Результат в консоли сейчас останавливается на 9 9. Должен на 5 4.
+
+// for (let i = 0; i < 10; i++) { //! Эту строку можно изменить
+//     for (let j = 0; j < 10; j++) {
+//       if (i === 5 && j === 5) {
+//         //! Эту строку можно изменить
+//       }
+   
+//       console.log(i, j);
+//     }
+//    }
+
+// exercise number 4.
+
+//Напишите функцию JavaScript, которая переворачивает число.
+//Math.floor()
+
+function reverse_number(num) {
+
+num = num + ""; // Преобразование числа в строку
+
+let arr = [];
+
+arr.push(num);
+
+return num.split('').reverse().join();
+
+
+};
+
+reverse_number(234);
+
+

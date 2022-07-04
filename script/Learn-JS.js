@@ -574,3 +574,55 @@
 // });
 
 // console.log(newArr);
+
+
+/* Структуры данных : Map и Set */
+
+// Map - это как структура данных Object, только разница в том, что Map позволяет применять к новой коллекции разные ключи;
+
+// let a = new Map(); //тут я создал новую пустую структуру;
+
+// let arr = ['asdfavhuasd'];
+
+// function vievString (arr) {
+
+//     let map = new Map();
+
+//     for (let i = 0; i < arr.length; i++){
+//         let containStr = arr[i];
+
+//         if (map.has(containStr)){
+
+//             return false;
+//         }
+
+//         map.add(containStr);
+//     }
+
+//     return true;
+// };
+
+// console.log(vievString(arr));
+
+
+/* Замыкания в JS */
+
+// function testClosing(n) {
+//     return function (b) {
+//         return n * b;
+//      };
+// }
+
+// const addFunc = testClosing(2);
+
+// console.log(addFunc(2));
+
+function testClosing(num) {
+    return (n) => {
+        return n + num;
+    }
+}
+
+let calc = testClosing(4);
+
+console.log(calc(4));
