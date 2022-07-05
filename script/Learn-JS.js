@@ -617,12 +617,20 @@
 
 // console.log(addFunc(2));
 
-function testClosing(num) {
-    return (n) => {
-        return n + num;
-    }
-}
+// function testClosing(num) {
+//     return (n) => {
+//         return n + num;
+//     }
+// }
 
-let calc = testClosing(4);
+// let calc = testClosing(4);
 
-console.log(calc(4));
+// console.log(calc(4));
+
+//---------------------------------------------------------------------------------------------------------------
+
+/* Повторение прошедших тем  */
+
+// 1) Типы данных.
+
+// string, number, BigInt, undefined, NaN, null, function, object, symbol;
