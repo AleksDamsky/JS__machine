@@ -691,16 +691,16 @@
 // 12) .flatmap();
 // 13) .
  
-function splitString(stringToSplit, separator) {
+// function splitString(stringToSplit, separator) {
 
-    let arrayOfStrings = [];
-    arrayOfStrings.push(stringToSplit);
-    arrayOfStrings = stringToSplit.split(separator);
+//     let arrayOfStrings = [];
+//     arrayOfStrings.push(stringToSplit);
+//     arrayOfStrings = stringToSplit.split(separator);
   
-    console.log('Оригинальная строка: "' + stringToSplit + '"');
-    console.log('Разделитель: "' + separator + '"');
-    console.log('Массив содержит ' + arrayOfStrings.length + ' элементов: ' + arrayOfStrings.join(' / '));
-  };
+//     console.log('Оригинальная строка: "' + stringToSplit + '"');
+//     console.log('Разделитель: "' + separator + '"');
+//     console.log('Массив содержит ' + arrayOfStrings.length + ' элементов: ' + arrayOfStrings.join(' / '));
+//   };
 
-splitString('И как хорош тот новый мир где есть такие люди!');
-//   console.log(splitString("И как хорош тот новый мир, где есть такие люди!"), "");
+// splitString('И как хорош тот новый мир, где есть такие люди!');
+// //   console.log(splitString("И как хорош тот новый мир, где есть такие люди!"), "");

@@ -83,19 +83,31 @@
 //Напишите функцию JavaScript, которая переворачивает число.
 //Math.floor()
 
-function reverse_number(num) {
+// function reverse_number(num) {
 
-num = num + ""; // Преобразование числа в строку
+// num = num + ""; // Преобразование числа в строку
 
-let arr = [];
+// let arr = [];
 
-arr.push(num);
+// arr.push(num);
 
-return num.split('').reverse().join();
-
-
-};
-
-reverse_number(234);
+// return num.split('').reverse().join();
 
 
+// };
+
+// reverse_number(234);
+
+
+//Завершите функцию, которая принимает два аргумента и возвращает все числа, которые делятся на данный делитель. Первый аргумент - это массив чисел, а второй - делитель.
+
+let arrNumber = [1, 2, 3, 4, 5, 6, 7, 8];
+
+for (let i = 0; i < arrNumber.length; i++){
+
+    let newArrNumber = arrNumber.map((item) => {
+        if (item % 2 == 0) {
+            return newArrNumber;
+        }
+    })
+}
