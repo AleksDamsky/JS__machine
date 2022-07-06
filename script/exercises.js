@@ -99,15 +99,59 @@
 // reverse_number(234);
 
 
+// Самая простая задача на нахождение числа Фбоначчи;
+
+// 1 + 1 + 2 + 3 = 5 
+
+// Рекурсивный метод
+// function fibonachhi (n) {
+
+//     if (n <= 0){
+//         return 0;
+
+//     } else if(n <= 2) {
+//         return 1;
+
+//     } else {
+
+//         return fibonachhi(n - 1) + fibonachhi(n - 2);
+//     }
+// }
+
+// console.log(fibonachhi(9));
+
+
+// РЕшение через цикл;
+
+// function fibonachi( n ) {
+
+//     while(n){
+//         if (n <= 0){
+//             return 0;
+
+//         } else if (n <= 2) {
+//             return 1;
+
+//         } else{
+//             return (n-1) + (n-2);
+
+//         }
+//     }
+
+// }
+
+// console.log(fibonachi(10));
+
+
 //Завершите функцию, которая принимает два аргумента и возвращает все числа, которые делятся на данный делитель. Первый аргумент - это массив чисел, а второй - делитель.
 
-let arrNumber = [1, 2, 3, 4, 5, 6, 7, 8];
+// let arrNumber = [1, 2, 3, 4, 5, 6, 7, 8];
 
-for (let i = 0; i < arrNumber.length; i++){
+// for (let i = 0; i < arrNumber.length; i++){
 
-    let newArrNumber = arrNumber.map((item) => {
-        if (item % 2 == 0) {
-            return newArrNumber;
-        }
-    })
-}
+//     let newArrNumber = arrNumber.map((item) => {
+//         if (item % 2 == 0) {
+//             return newArrNumber;
+//         }
+//     })
+// }
