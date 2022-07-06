@@ -704,3 +704,35 @@
 
 // splitString('И как хорош тот новый мир, где есть такие люди!');
 // //   console.log(splitString("И как хорош тот новый мир, где есть такие люди!"), "");
+
+// let a = 5;
+// let b = 6;
+
+// function sumNum (){
+//     return a + b;
+
+// };
+
+// console.log(sumNum(a, b))
+
+/* OOП */
+
+// Создание класса;
+
+class Lesson  {
+    усидчивость;
+    время;
+    
+    constructor(focus, time){
+        this.усидчивость = focus;
+        this.время = time;
+    };
+
+    results(){
+        return this.усидчивость * this.время;
+    };
+}
+
+const person1 = new Lesson (50, 10000);
+
+console.log(person1.results());
