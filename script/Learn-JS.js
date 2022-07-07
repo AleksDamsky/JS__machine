@@ -728,6 +728,7 @@
 
 // Object - это объект. Он является типичным примером или предсавителем своего класса.
 
+// Геттеры < get > - чтобы получать значение извне; Сеттеры < set > - для того, чтобы их изменять;
 
 
 // class Lesson  {
@@ -747,3 +748,43 @@
 // const person1 = new Lesson (50, 10000);
 
 // console.log(person1.results());
+
+class Clone {
+    number;
+    name;
+    unit;
+
+    constructor (num, n, u){
+        this.number = num;
+        this.name = n;
+        this.unit = u;
+    };
+
+    dinamic(){
+        console.log('Yes, command!');
+    }
+};
+
+// Просто создание и вызов объектов, образованных от класса;
+
+// const rokkie = new Clone('NC-34/234', 'Liip', 'ArksOP');
+// console.log(rokkie);
+
+// const rokkie2 = new Clone('CC-269/9913', 'Hover', 'ArksOP');
+// console.log(rokkie2);
+
+// Пример наследования класса;
+
+class CloneClon extends Clone{
+    motherLand;
+    first_fight;
+
+    constructor(number, name, unit, motherLand, first_fight){
+        super(number, name, unit);
+        this.motherLand = motherLand;
+        this.first_fight = first_fight;
+    }
+};
+
+const clone_pilot = new CloneClon ('CB - 250/00', 'Shark', 'NovaCORp', 'Camino', '22dbd');
+console.log(clone_pilot);
