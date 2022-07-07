@@ -145,6 +145,9 @@
 
 //Завершите функцию, которая принимает два аргумента и возвращает все числа, которые делятся на данный делитель. Первый аргумент - это массив чисел, а второй - делитель.
 
-const showNumber = (number, devisor) => number.filter(num => num % 2 == 0)
+// const showNumber = (number, devisor) => number.filter(num => num % devisor == 0)
 
-console.log(showNumber([2, 4 , 5, 6, 7,8 ,9 ,10, 11, 12], 2));
+// console.log(showNumber([2, 4 , 5, 6, 7,8 ,9 ,10, 11, 12], 2));
+
+let arrFunction = (number, devisor) => number.filter(item => item % devisor == 0);
+console.log(arrFunction([1,2, 3, 4, 5,6, 7, 8, 9, 10], 3))
