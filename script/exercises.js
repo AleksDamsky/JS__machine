@@ -152,21 +152,43 @@
 // let arrFunction = (number, devisor) => number.filter(item => item % devisor == 0);
 // console.log(arrFunction([1,2, 3, 4, 5,6, 7, 8, 9, 10], 3));
 
+// let a = (number, devisor) => number.filter(num => num % 2 == 0);
+// console.log(a([2, 5, 7, 1, ,2, 34, 5]));
+
 //Ваша функция принимает два аргумента:
 
 // текущий возраст отца (лет)
 // текущий возраст сына (лет)
 // Подсчитайте, сколько лет назад отец был вдвое старше сына (или через сколько лет он будет вдвое старше;
 
-function culcOld(oldFather, oldChild) {
+// function showNumber (currentOldSon, currentOldFather) {
+//     let oldFather = currentOldFather;
+//     let oldSon = currentOldSon;
 
-    let father = oldFather;
-    let son = oldChild;
+//     let sonResults;
+//     sonResults = oldSon * 2;
+    
+//     let fatherResults = oldFather - sonResults;
 
-    let oldChildResult = son * son;
-    let oldFatherResults = father - oldChildResult;
+//     let endResults = oldFather - fatherResults;
+//     console.log(endResults);
+// };
 
-    console.log(oldFatherResults);
+// console.log(showNumber(0, 29));
+
+ // Math.abs(currentOldSon * 2 - currentOldFather);
+
+//  Если задано число n, вернуть количество положительных нечетных чисел меньше n, ЛЕГКО!
+
+function getN (arr, n) {
+
+    let num = n;
+    arr.includes(num);
+    
+    let newArr = [];
+    for(; num >= arr.length; num--){
+        console.log(num);
+    }
 };
 
-culcOld(36, 7);
+getN([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 8)

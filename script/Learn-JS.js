@@ -867,34 +867,34 @@ class Car {
 
 // Можно расширять класс посредством комманды вот такой логики:  /* extend - расширять */
 
-class RussiaCar extends Car {
+// class RussiaCar extends Car {
 
-    // расширитель включает в себя свойства прототипа, и свои собственые;
-    date;
-    city;
+//     // расширитель включает в себя свойства прототипа, и свои собственые;
+//     date;
+//     city;
 
-    // конструктор первыми параметрами включает в себя свойства своего прототипа;
-    constructor(name, country, city){
-        // < super > - этим методом мы говорим о том, что необходимо включить первыми параметры прототипа;
-        super(name, country);
-        this.date = function randomDate(start, end, startHour, endHour) {
-            var date = new Date(+start + Math.random() * (end - start));
-            var hour = startHour + Math.random() * (endHour - startHour) | 0;
-            date.setHours(hour);
-            return date; // тут должна была быть рандомная дата...
-          }
-          this.city = city;
-        };
-    };
+//     // конструктор первыми параметрами включает в себя свойства своего прототипа;
+//     constructor(name, country, city){
+//         // < super > - этим методом мы говорим о том, что необходимо включить первыми параметры прототипа;
+//         super(name, country);
+//         this.date = function randomDate(start, end, startHour, endHour) {
+//             var date = new Date(+start + Math.random() * (end - start));
+//             var hour = startHour + Math.random() * (endHour - startHour) | 0;
+//             date.setHours(hour);
+//             return date; // тут должна была быть рандомная дата...
+//           }
+//           this.city = city;
+//         };
+//     };
 
-function showCar(){
-    const RussianCar = new RussiaCar('Lada', 'Russia', 'Moscow');
+// function showCar(){
+//     const RussianCar = new RussiaCar('Lada', 'Russia', 'Moscow');
 
-    console.log(RussianCar.date());
-    console.log(RussianCar.name);
-    console.log(RussianCar.country);
-    console.log(RussianCar.number);
-    console.log(RussianCar.city);
-};
+//     console.log(RussianCar.date());
+//     console.log(RussianCar.name);
+//     console.log(RussianCar.country);
+//     console.log(RussianCar.number);
+//     console.log(RussianCar.city);
+// };
 
-console.log(showCar());
+// console.log(showCar());
