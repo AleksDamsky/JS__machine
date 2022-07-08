@@ -886,5 +886,15 @@ class RussiaCar extends Car {
           this.city = city;
         };
     };
-const carFromRussia = new RussiaCar('Lada', 'Russia', 'Moscow');
-console.log(carFromRussia);
+
+function showCar(){
+    const RussianCar = new RussiaCar('Lada', 'Russia', 'Moscow');
+
+    console.log(RussianCar.date());
+    console.log(RussianCar.name);
+    console.log(RussianCar.country);
+    console.log(RussianCar.number);
+    console.log(RussianCar.city);
+};
+
+console.log(showCar());
