@@ -793,7 +793,7 @@
 // Практика ООП
 
 // class DataBase {
-//     url : number;
+//     url;
 
 //     constructor(){
 //         this.url = Math.random();
@@ -806,20 +806,40 @@
 // console.log(db1.url);
 // console.log(db2.url);
 
-class Clone {
-    name;
-    old; 
+// class Clone {
+//     name;
+//     old; 
 
-    constructor(n, o){
-        this.name = n;
-        this.old = o;
-    };
+//     constructor(n, o){
+//         this.name = n;
+//         this.old = o;
+//     };
 
-    gritting() {
-        console.log('hellow!');
-    };
+//     gritting() {
+//         console.log('hellow!');
+//     };
 
-};
+// };
 
-let clone1 = new Clone('Aleks');
-console.log(clone1.name)
+// let clone1 = new Clone('Aleks');
+// console.log(clone1.name)
+
+
+// class DataBase {
+//     url;
+
+//     constructor(){
+//         this.url = Math.random(); 
+//     }
+// }
+
+// let cloneDb = new DataBase();
+// console.log(cloneDb.url);
+
+// ООП - это способ решения задач в программированни с помщью классов или прототипов; также позволяет создавать программные обеспечения;
+
+
+// Принцип ООП - создать сложную систему объектов, которые будут решать тяжелые задачи;
+// Объявление себя в ООП - self, this;
+// Наследование - это способ сказать, что объекты от класса похожи друг на друга, но не идентичны, так как каждый выполняет свою работу;
+// Инкапсуляция - это капсула, в которой есть информация;
