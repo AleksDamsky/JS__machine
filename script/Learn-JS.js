@@ -749,21 +749,21 @@
 
 // console.log(person1.results());
 
-class Clone {
-    number;
-    name;
-    unit;
+// class Clone {
+//     number;
+//     name;
+//     unit;
 
-    constructor (num, n, u){
-        this.number = num;
-        this.name = n;
-        this.unit = u;
-    };
+//     constructor (num, n, u){
+//         this.number = num;
+//         this.name = n;
+//         this.unit = u;
+//     };
 
-    dinamic(){
-        console.log('Yes, command!');
-    }
-};
+//     dinamic(){
+//         console.log('Yes, command!');
+//     }
+// };
 
 // Просто создание и вызов объектов, образованных от класса;
 
@@ -775,16 +775,51 @@ class Clone {
 
 // Пример наследования класса;
 
-class CloneClon extends Clone{
-    motherLand;
-    first_fight;
+// class CloneClon extends Clone{
+//     motherLand;
+//     first_fight;
 
-    constructor(number, name, unit, motherLand, first_fight){
-        super(number, name, unit);
-        this.motherLand = motherLand;
-        this.first_fight = first_fight;
-    }
+//     constructor(number, name, unit, motherLand, first_fight){
+//         super(number, name, unit);
+//         this.motherLand = motherLand;
+//         this.first_fight = first_fight;
+//     }
+// };
+
+// const clone_pilot = new CloneClon ('CB - 250/00', 'Shark', 'NovaCORp', 'Camino', '22dbd');
+// console.log(clone_pilot);
+
+
+// Практика ООП
+
+// class DataBase {
+//     url : number;
+
+//     constructor(){
+//         this.url = Math.random();
+//     }
+// };
+
+// let db1 = new DataBase();
+// let db2 = new DataBase();
+
+// console.log(db1.url);
+// console.log(db2.url);
+
+class Clone {
+    name;
+    old; 
+
+    constructor(n, o){
+        this.name = n;
+        this.old = o;
+    };
+
+    gritting() {
+        console.log('hellow!');
+    };
+
 };
 
-const clone_pilot = new CloneClon ('CB - 250/00', 'Shark', 'NovaCORp', 'Camino', '22dbd');
-console.log(clone_pilot);
+let clone1 = new Clone('Aleks');
+console.log(clone1.name)

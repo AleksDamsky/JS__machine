@@ -149,5 +149,24 @@
 
 // console.log(showNumber([2, 4 , 5, 6, 7,8 ,9 ,10, 11, 12], 2));
 
-let arrFunction = (number, devisor) => number.filter(item => item % devisor == 0);
-console.log(arrFunction([1,2, 3, 4, 5,6, 7, 8, 9, 10], 3))
+// let arrFunction = (number, devisor) => number.filter(item => item % devisor == 0);
+// console.log(arrFunction([1,2, 3, 4, 5,6, 7, 8, 9, 10], 3));
+
+//Ваша функция принимает два аргумента:
+
+// текущий возраст отца (лет)
+// текущий возраст сына (лет)
+// Подсчитайте, сколько лет назад отец был вдвое старше сына (или через сколько лет он будет вдвое старше;
+
+function culcOld(oldFather, oldChild) {
+
+    let father = oldFather;
+    let son = oldChild;
+
+    let oldChildResult = son * son;
+    let oldFatherResults = father - oldChildResult;
+
+    console.log(oldFatherResults);
+};
+
+culcOld(36, 7);
