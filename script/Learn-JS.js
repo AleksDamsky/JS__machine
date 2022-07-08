@@ -843,3 +843,48 @@
 // Объявление себя в ООП - self, this;
 // Наследование - это способ сказать, что объекты от класса похожи друг на друга, но не идентичны, так как каждый выполняет свою работу;
 // Инкапсуляция - это капсула, в которой есть информация;
+
+// Классовое наследование в ООП - это система чертеж -> проект;
+// Сам < class > в ООп - это чертеж для < object >;
+// В классе сущестуют свойства и методы; Свойства - это основные характеристики для класса; Методы - это действия и функции, которые может производить этот класс; Помимо свойств и методов есть < constructor >; Конструктор определяет свойства, которые будут входить в новый объект;
+
+class Car {
+    name;
+    country;
+    number;
+
+    constructor(name, country){
+        this.name = name;
+        this.country = country;
+        this.number = Math.floor(Math.random() * 20);
+    }
+};
+
+// const car1 = new Car('Benz', 'Germany');
+// console.log(car1);
+
+// Нужно знать, что различные изменения в классе изменят и объекты, наследуемые от него; ТАк же и изменятся дочерние элементы объекта;
+
+// Можно расширять класс посредством комманды вот такой логики:  /* extend - расширять */
+
+class RussiaCar extends Car {
+
+    // расширитель включает в себя свойства прототипа, и свои собственые;
+    date;
+    city;
+
+    // конструктор первыми параметрами включает в себя свойства своего прототипа;
+    constructor(name, country, city){
+        // < super > - этим методом мы говорим о том, что необходимо включить первыми параметры прототипа;
+        super(name, country);
+        this.date = function randomDate(start, end, startHour, endHour) {
+            var date = new Date(+start + Math.random() * (end - start));
+            var hour = startHour + Math.random() * (endHour - startHour) | 0;
+            date.setHours(hour);
+            return date; // тут должна была быть рандомная дата...
+          }
+          this.city = city;
+        };
+    };
+const carFromRussia = new RussiaCar('Lada', 'Russia', 'Moscow');
+console.log(carFromRussia);
