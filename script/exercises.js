@@ -179,16 +179,23 @@
  // Math.abs(currentOldSon * 2 - currentOldFather);
 
 //  Если задано число n, вернуть количество положительных нечетных чисел меньше n, ЛЕГКО!
+// const addNumber = n => (n-1) / 2;
 
-function getN (arr, n) {
+// console.log(addNumber(15));
 
-    let num = n;
-    arr.includes(num);
-    
-    let newArr = [];
-    for(; num >= arr.length; num--){
-        console.log(num);
-    }
-};
+function toCamelCase(str){
 
-getN([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 8)
+    // let arr = str.split('-')
+    let arr = str.split('_')
+   
+    // arr[0] = 'The';
+    // arr[1] = 'Stealth';
+    // arr[2] = 'Warrior';
+    arr[0] = 'The';
+    arr[1] = 'Stealth';
+    arr[2] = 'Warrior';
+
+    console.log(arr.join(''));
+  }
+// console.log(toCamelCase('the-stealth-warrior'))
+console.log(toCamelCase("The_Stealth_Warrior"))
